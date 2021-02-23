@@ -1,21 +1,12 @@
 use Mix.Config
 
-# Configure your database
-config :hello, Hello.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "hello_dev",
-  hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :hello, HelloWeb.Endpoint,
+config :crud, CrudWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +46,13 @@ config :hello, HelloWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :hello, HelloWeb.Endpoint,
+config :crud, CrudWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/hello_web/(live|views)/.*(ex)$",
-      ~r"lib/hello_web/templates/.*(eex)$"
+      ~r"lib/crud_web/(live|views)/.*(ex)$",
+      ~r"lib/crud_web/templates/.*(eex)$"
     ]
   ]
 

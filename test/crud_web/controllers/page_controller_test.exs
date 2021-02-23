@@ -1,5 +1,5 @@
-defmodule HelloWeb.PageControllerTest do
-  use HelloWeb.ConnCase
+defmodule CrudWeb.PageControllerTest do
+  use CrudWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

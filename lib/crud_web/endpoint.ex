@@ -1,16 +1,16 @@
-defmodule HelloWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :hello
+defmodule CrudWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :crud
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_hello_key",
-    signing_salt: "Yg6JJ6D8"
+    key: "_crud_key",
+    signing_salt: "LbuZD5p5"
   ]
 
-  socket "/socket", HelloWeb.UserSocket,
+  socket "/socket", CrudWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule HelloWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :hello,
+    from: :crud,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,6 @@ defmodule HelloWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :hello
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +49,5 @@ defmodule HelloWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug HelloWeb.Router
+  plug CrudWeb.Router
 end

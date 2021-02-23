@@ -7,16 +7,13 @@
 # General application configuration
 use Mix.Config
 
-config :hello,
-  ecto_repos: [Hello.Repo]
-
 # Configures the endpoint
-config :hello, HelloWeb.Endpoint,
+config :crud, CrudWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "lda6OxRxUe/5Q3axUGXNQDQ/uEmjpcAW7JdTwJ4jvZN7CzLaO2C2AFohi83FlmwN",
-  render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Hello.PubSub,
-  live_view: [signing_salt: "qH5ydt6a"]
+  secret_key_base: "LdLrjrcMYH/MBY4OrQmAqA+ie38cx42Uva/46NVPZdYRrDwWusI+Rt5MAy0g51K+",
+  render_errors: [view: CrudWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Crud.PubSub,
+  live_view: [signing_salt: "xKoM+GGO"]
 
 # Configures Elixir's Logger
 config :logger, :console,
